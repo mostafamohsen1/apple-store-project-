@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Apple Store Inspired Homepage</title>
+    <link rel="stylesheet" href="home page css.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div><a href="#" class="apple-logo"> <img src="D:\my programs\apple store\images\apple2-removebg-preview.png" width="30px" alt="Apple Logo"> </a></div>
+            <ul class="nav-links">
+                <li><a href="apple_store.html">Store</a></li>
+                <li><a href="#mac">Mac</a></li>
+                <li><a href="#ipad">iPad</a></li>
+                <li><a href="#iphone">iPhone</a></li>
+                <li><a href="#watch">Watch</a></li>
+                <li><a href="#airpods">AirPods</a></li>
+                <li><a href="#tv">TV & Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#" class="signin-link" id="signin-button">Sign In</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sign In Modal -->
+    <div id="signin-modal" class="signin-modal">
+        <div class="signin-content">
+            <span class="close-button">&times;</span>
+            <div class="signin-header">
+                <img src="images/apple-logo.svg" width="40" alt="Apple Logo">
+                <h2>Sign in with your Apple ID</h2>
+                <p>Use your Apple ID to sign in to the Apple Store.</p>
+            </div>
+            <form class="signin-form">
+                <div class="form-group">
+                    <input type="email" id="apple-id" placeholder="Apple ID" required>
+                </div>
+                <div class="form-group password-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                        <span class="show-icon">👁️</span>
+                    </button>
+                </div>
+                <div class="form-group remember-group">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Keep me signed in</label>
+                </div>
+                <button type="submit" class="signin-button">Sign In</button>
+                <div class="sign-in-links">
+                    <a href="#">Forgot Apple ID or Password?</a>
+                    <a href="#">Create Your Apple ID</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content"> 
+              <h1>iPhone 16 Pro</h1>
+              <h2>Titanium. So strong. So light. So Pro.</h2>
+            <div class="hero-buttons">
+             
+                    <a href="apple_store.html" class="hero-button primary">Buy</a>
+                <a href="#" class="hero-button secondary">Learn more</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="D:\my programs\apple store\images\hero_endframe__b3cjfkquc2s2_xlarge.jpg" alt="iPhone 16 Pro">
+        </div>
+    </section>
+
+    <section id="featured" class="featured-section">
+        <div class="section-title">
+            <h2>The latest. Take a look at what's new, right now.</h2>
+        </div>
+        <div class="featured-grid">
+            <div class="featured-item large">
+                <div class="featured-content">
+                    <h3>MacBook Pro</h3>
+                    <p>Supercharged by M2 Pro and M2 Max.</p>
+                    <div class="featured-links">
+                        <a href="apple_store.html">Buy</a>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+                <img src="D:\my programs\apple store\images\macbook-pro-14-inch-2023-pp-header.png" alt="MacBook Pro">
+            </div>
+            <div class="featured-item">
+                <div class="featured-content dark">
+                    <h3>iPad Pro</h3>
+                    <p>Supercharged by M2</p>
+                    <div class="featured-links">
+                        <a href="apple_store.html">Buy</a>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+                <img src="D:\my programs\apple store\images\OIP.jpeg" alt="iPad Pro">
+            </div>
+            <div class="featured-item">
+                <div class="featured-content">
+                    <h3>Apple Watch Series 7</h3>
+                    <p>A healthy leap ahead.</p>
+                    <div class="featured-links">
+                        <a href="apple_store.html">Buy</a>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+                <img src="D:\my programs\apple store\images\AppleWatch7_5-scaled.jpeg" alt="Apple Watch">
+            </div>
+            
+            <!-- New Featured Items -->
+            <div class="featured-item highlight">
+                <div class="featured-content highlight">
+                    <h3>AirPods Pro</h3>
+                    <p>Sound all around.</p>
+                    <div class="featured-links">
+                        <a href="apple_store.html">Buy</a>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+                <img src="D:\my programs\apple store\images\airpods-removebg-preview.png" alt="AirPods Pro">
+            </div>
+            <div class="featured-item">
+                <div class="featured-content">
+                    <h3>HomePod mini</h3>
+                    <p>Room-filling sound in a compact design.</p>
+                    <div class="featured-links">
+                        <a href="apple_store.html">Buy</a>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-mini-select-blue-202110_FV1?wid=1868&hei=880&fmt=jpeg&qlt=90&.v=1633086025000" alt="HomePod mini">
+            </div>
+            <div class="featured-item large special">
+                <div class="featured-content">
+                    <h3>Apple Vision Pro</h3>
+                    <p>Welcome to the era of spatial computing.</p>
+                    <div class="featured-links">
+                        <a href="apple_store.html">Pre-order</a>
+                        <a href="#">Watch the film</a>
+                    </div>
+                </div>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/vision-pro-card-66-vision-pro-202401?wid=1172&hei=588&fmt=p-jpg&qlt=95&.v=1702510799485" alt="Apple Vision Pro">
+            </div>
+        </div>
+    </section>
+
+    <section id="promo" class="promo-section">
+        <div class="promo-content">
+            <h2>Apple Trade In</h2>
+            <h3>Upgrade and save. It's that easy.</h3>
+            <p>Get credit toward your next purchase when you trade in your eligible device.</p>
+            <a href="#" class="text-link">See what your device is worth</a>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="section-title">
+            <h2>Apple Services</h2>
+            <p>Get more out of your Apple devices with these services.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="images/apple-music-icon.svg" alt="Apple Music" class="service-icon">
+                <h3>Apple Music</h3>
+                <p>Over 100 million songs. Plus your entire music library.</p>
+                <a href="#" class="text-link">Try it free</a>
+            </div>
+            <div class="service-item">
+                <img src="images/apple-tv-icon.svg" alt="Apple TV+" class="service-icon">
+                <h3>Apple TV+</h3>
+                <p>Get 3 months free when you buy an Apple device.</p>
+                <a href="#" class="text-link">Learn more</a>
+            </div>
+            <div class="service-item">
+                <img src="images/apple-arcade-icon.svg" alt="Apple Arcade" class="service-icon">
+                <h3>Apple Arcade</h3>
+                <p>Get 3 months free when you buy an Apple device.</p>
+                <a href="#" class="text-link">Learn more</a>
+            </div>
+            <div class="service-item">
+                <img src="images/icloud-icon.svg" alt="iCloud+" class="service-icon">
+                <h3>iCloud+</h3>
+                <p>More storage and privacy features for all your devices.</p>
+                <a href="#" class="text-link">Learn more</a>
+                    </div>  
+                </div>              
+    </section>
+
+    <section id="newsletter" class="newsletter-section">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <h2>Stay updated with Apple news</h2>
+                <p>Sign up for our newsletter to receive updates on new products, special offers, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="newsletter-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+            <section id="contact" class="contact-section">
+                <div class="content">
+                    <h2>Contact Apple Support</h2>
+                    <p>If you need assistance with any Apple products or services, our support team is here to help.</p>
+                    <a href="https://support.apple.com/" class="contact-button" target="_blank">Contact Apple</a>
+                </div>
+            </section>
+    
+    <footer class="home-footer">
+        <div class="footer-top">
+            <p>To access and use all the features of Apple products and services, you need to enable JavaScript in your web browser.</p>
+            <p>Copyright © 2023 Apple Inc. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="about.html">About Apple</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="home page js.js"></script>
+</body>
+</html>

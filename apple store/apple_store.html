@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apple Store</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 48' width='32' height='32'><path d='m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734-1.8353.7581-3.0572.7581-1.9639-1.0589-2.8876-2.3346a11.3987 11.3987 0 0 1 -1.9395-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8837-.8543 3.3049-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z' fill='%23000'/></svg>"/>
+  <link rel="stylesheet" href="css2.css" />
+  <script src="js2.js" defer></script>
+  <script src="bag.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-logo">
+          <svg height="54" viewBox="0 0 17 48" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734-1.8353.7581-3.0572.7581-1.9639-1.0589-2.8876-2.3346a11.3987 11.3987 0 0 1 -1.9395-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8837-.8543 3.3049-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path>
+          </svg>
+        </a>
+        
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#" class="nav-link">Store</a></li>
+          <li class="nav-item"><a href="#macs" class="nav-link">Mac</a></li>
+          <li class="nav-item"><a href="#ipads" class="nav-link">iPad</a></li>
+          <li class="nav-item"><a href="#iphones" class="nav-link">iPhone</a></li>
+          <li class="nav-item"><a href="#watches" class="nav-link">Watch</a></li>
+          <li class="nav-item"><a href="#airpods" class="nav-link">AirPods</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">TV & Home</a></li>
+          <li class="nav-item"><a href="#accessories" class="nav-link">Accessories</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Support</a></li>
+      </ul>
+
+      <div class="nav-right">
+          <button id="search-toggle" class="nav-icon" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+              <path d="M15.5,14h-.79l-.28-.27A6.471,6.471,0,0,0,16,9.5,6.5,6.5,0,1,0,9.5,16c1.61,0,3.09-.59,4.23-1.57l.27.28v.79l5,4.99L20.49,19l-4.99-5zm-6,0C7.01,14,5,11.99,5,9.5S7.01,5,9.5,5,14,7.01,14,9.5,11.99,14,9.5,14z"/>
+            </svg>
+          </button>
+          
+          <!-- Add Cart Button -->
+          <a href="#" id="cart-btn" class="nav-icon" aria-label="Shopping Bag">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 16 19">
+              <path d="M14.5,4h-1.5c0-2.2-1.8-4-4-4h-2c-2.2,0-4,1.8-4,4h-1.5c-0.8,0-1.5,0.7-1.5,1.5v12c0,0.8,0.7,1.5,1.5,1.5h13c0.8,0,1.5-0.7,1.5-1.5v-12c0-0.8-0.7-1.5-1.5-1.5zm-9.8-0.5c0.2-1.1,1.3-2,2.3-2h2c1.1,0,2.1,0.9,2.3,2h-6.6z"></path>
+            </svg>
+            <span id="cart-counter" class="cart-count">0</span>
+          </a>
+          
+          <button id="signin-btn" class="nav-icon" aria-label="Sign In">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8,0a4,4,0,1,0,4,4A4,4,0,0,0,8,0ZM8,10.667c-2.945,0-8,1.467-8,4.667V16H16V15.333C16,12.134,10.945,10.667,8,10.667Z"></path>
+            </svg>
+          </button>
+          
+          <button class="burger-menu" id="burger-menu">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Search Popup -->
+  <div id="search-popup" class="search-popup">
+    <div class="search-popup-header">
+      <div class="search-bar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+          <path d="M15.5,14h-.79l-.28-.27A6.471,6.471,0,0,0,16,9.5,6.5,6.5,0,1,0,9.5,16c1.61,0,3.09-.59,4.23-1.57l.27.28v.79l5,4.99L20.49,19l-4.99-5zm-6,0C7.01,14,5,11.99,5,9.5S7.01,5,9.5,5,14,7.01,14,9.5,11.99,14,9.5,14z"/>
+        </svg>
+        <input type="text" class="search-popup-input" placeholder="Search apple.com" autofocus>
+      </div>
+      <button class="search-popup-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="search-popup-body">
+      <div class="recommended-section">
+        <h3 class="recommended-title">Recommended Products</h3>
+        <div class="recommended-products">
+          <!-- Recommended products will be added here by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Popup Backdrop -->
+  <div class="search-popup-backdrop"></div>
+
+  <!-- Sign In Modal -->
+  <div id="signin-modal" class="modal">
+    <div class="signin-content">
+      <button class="close-button">×</button>
+      <div class="signin-header">
+        <div class="apple-logo">
+          <svg height="44" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg">
+            <path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734-1.8353.7581-3.0572.7581-1.9639-1.0589-2.8876-2.3346a11.3987 11.3987 0 0 1 -1.9395-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8837-.8543 3.3049-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path>
+          </svg>
+        </div>
+        <h2>Sign in with Apple ID</h2>
+        <p>Use your Apple ID or create a new account to continue to Apple Store</p>
+      </div>
+      
+      <div class="signin-tabs">
+        <button class="tab-btn active" data-tab="sign-in">Sign In</button>
+        <button class="tab-btn" data-tab="create-account">Create Account</button>
+      </div>
+      
+      <div class="tab-content active" id="sign-in-content">
+        <form class="signin-form">
+          <div class="form-group">
+            <div class="input-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <input type="email" class="form-control" placeholder="Apple ID" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+              </svg>
+              <input type="password" id="password" class="form-control password-field" placeholder="Password" required>
+              <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                <svg class="eye-icon eye-open" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-icon eye-closed" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-10-7-10-7a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 10 7 10 7a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="remember-group">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="remember-me">
+              <label for="remember-me">
+                <span class="checkbox-custom"></span>
+                Remember me
+              </label>
+            </div>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="signin-button">Sign In</button>
+          
+          <div class="other-signin-options">
+            <div class="divider">
+              <span>Or sign in with</span>
+            </div>
+            <div class="social-signin">
+              <button class="social-btn google-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 186.69 190.5">
+                  <g transform="translate(1184.583 765.171)">
+                    <path clip-path="none" mask="none" d="M-1089.333-687.239v36.888h51.262c-2.251 11.863-9.006 21.908-19.137 28.662l30.913 23.986c18.011-16.625 28.402-41.044 28.402-70.052 0-6.754-.606-13.249-1.732-19.483z" fill="#4285f4"/>
+                    <path clip-path="none" mask="none" d="M-1142.714-651.791l-6.972 5.337-24.679 19.223h0c15.673 31.086 47.796 52.561 85.03 52.561 25.717 0 47.278-8.486 63.038-23.033l-30.913-23.986c-8.486 5.715-19.31 9.179-32.125 9.179-24.765 0-45.806-16.712-53.34-39.226z" fill="#34a853"/>
+                    <path clip-path="none" mask="none" d="M-1174.365-712.61c-6.494 12.815-10.217 27.276-10.217 42.689s3.723 29.874 10.217 42.689c0 .086 31.693-24.592 31.693-24.592-1.905-5.715-3.031-11.776-3.031-18.098s1.126-12.383 3.031-18.098z" fill="#fbbc05"/>
+                    <path d="M-1089.333-727.244c14.028 0 26.497 4.849 36.455 14.201l27.276-27.276c-16.539-15.413-38.013-24.852-63.731-24.852-37.234 0-69.359 21.388-85.032 52.561l31.692 24.592c7.533-22.514 28.575-39.226 53.34-39.226z" fill="#ea4335" clip-path="none" mask="none"/>
+                  </g>
+                </svg>
+                <span>Google</span>
+              </button>
+              <button class="social-btn facebook-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                  <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h8.61v-6.97h-2.34V11.3h2.34V9.39c0-2.31 1.41-3.57 3.47-3.57.99 0 1.83.07 2.08.1v2.41h-1.43c-1.12 0-1.33.53-1.33 1.31v1.72h2.67l-.35 2.72h-2.32V21H20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1z" fill="#3b5998"/>
+                </svg>
+                <span>Facebook</span>
+              </button>
+            </div>
+          </div>
+        </form>
+        
+        <div class="signin-footer">
+          <p>By continuing, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+        </div>
+      </div>
+      
+      <div class="tab-content" id="create-account-content">
+        <form class="signup-form">
+          <div class="form-row">
+            <div class="form-group half">
+              <input type="text" class="form-control" placeholder="First Name" required>
+            </div>
+            <div class="form-group half">
+              <input type="text" class="form-control" placeholder="Last Name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <input type="email" class="form-control" placeholder="Email Address" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+              </svg>
+              <input type="password" class="form-control password-field" placeholder="Create Password" required>
+              <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                <svg class="eye-icon eye-open" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-icon eye-closed" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-10-7-10-7a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 10 7 10 7a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+              </svg>
+              <input type="password" class="form-control password-field" placeholder="Confirm Password" required>
+              <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                <svg class="eye-icon eye-open" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-icon eye-closed" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-10-7-10-7a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 10 7 10 7a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="date-selector">
+              <label>Date of Birth</label>
+              <div class="date-inputs">
+                <select name="dob-month" required>
+                  <option value="" disabled selected>Month</option>
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option value="3">March</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                  <option value="6">June</option>
+                  <option value="7">July</option>
+                  <option value="8">August</option>
+                  <option value="9">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+                <select name="dob-day" required>
+                  <option value="" disabled selected>Day</option>
+                  <!-- Options 1-31 would be populated with JavaScript -->
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <!-- ...and so on -->
+                </select>
+                <select name="dob-year" required>
+                  <option value="" disabled selected>Year</option>
+                  <!-- Years would be populated with JavaScript -->
+                  <option value="2006">2006</option>
+                  <option value="2005">2005</option>
+                  <!-- ...and so on -->
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="terms-agree" required>
+              <label for="terms-agree">
+                <span class="checkbox-custom"></span>
+                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="signin-button">Create Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification -->
+  <div id="notification" class="apple-notification"></div>
+
+  <!-- Hero Slider -->
+  <div class="hero-slider">
+    <div class="slides-container">
+      <div class="slide active" style="background-image: url('images/hero_endframe__b3cjfkquc2s2_xlarge.jpg');">
+        <div class="slide-content">
+          <h2>iPhone 16 Pro</h2>
+          <p>The ultimate iPhone experience</p>
+          <div class="hero-links">
+            <a href="#" class="hero-link">Learn more <span class="hero-chevron">›</span></a>
+            <a href="#" class="hero-link">Buy <span class="hero-chevron">›</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-202410-gallery-1?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=1728265561587');">
+        <div class="slide-content">
+          <h2>Mac mini</h2>
+          <p>More muscle. More hustle.</p>
+          <div class="hero-links">
+            <a href="#" class="hero-link">Learn more <span class="hero-chevron">›</span></a>
+            <a href="#" class="hero-link">Buy <span class="hero-chevron">›</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://www.apple.com/v/apple-watch-ultra-2/g/images/overview/design/design__bm70jvhnh09y_large_2x.jpg');">
+        <div class="slide-content dark-content">
+          <h2>Apple Watch Ultra 2</h2>
+          <p>Smarter. Brighter. Mightier.</p>
+          <div class="hero-links">
+            <a href="#" class="hero-link">Learn more <span class="hero-chevron">›</span></a>
+            <a href="#" class="hero-link">Buy <span class="hero-chevron">›</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://www.apple.com/v/ipad-pro/as/images/overview/closer-look/space-black/slide_4A__c2suhzbfcl8i_large_2x.jpg');">
+        <div class="slide-content">
+          <h2>iPad Pro</h2>
+          <p>Supercharged by M4</p>
+          <div class="hero-links">
+            <a href="#" class="hero-link">Learn more <span class="hero-chevron">›</span></a>
+            <a href="#" class="hero-link">Buy <span class="hero-chevron">›</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Hero Navigation Buttons -->
+    <div class="hero-nav-buttons">
+      <button class="hero-nav-button hero-prev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="hero-nav-button hero-next" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Slide Indicators -->
+    <div class="slide-indicators">
+      <span class="indicator active"></span>
+      <span class="indicator"></span>
+      <span class="indicator"></span>
+      <span class="indicator"></span>
+      <span class="indicator"></span>
+    </div>
+    
+    <!-- Swipe Down Indicator -->
+    <div class="swipe-indicator">
+      <div class="swipe-arrow">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 24L18 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M12 18L18 24L24 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Categories -->
+  <main>
+    <!-- iPhone Section -->
+    <section id="iphones" class="product-section">
+      <div class="section-header">
+        <h2>iPhone</h2>
+        <a href="#" class="view-all">View all <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="product-grid">
+        <div class="product-card" data-id="1" data-category="iphone">
+          <div class="product-badge">New</div>
+          <img src=https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone16-digitalmat-gallery-1-202409_GEO_US?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=1723669127697 alt="iPhone 16 Ultramarine" />
+          <div class="product-info">
+            <h3>iPhone 16</h3>
+            <p class="product-desc">The ultimate iPhone experience with A17 Pro.</p>
+            <p class="price">From $999.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #2b4f81;" data-color="ultramarine" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=5120&hei=2880&fmt=webp&qlt=70&.v=UXp1U3VDY3IyR1hNdHZwdFdOLzg1V0tFK1lhSCtYSGRqMUdhR284NTN4L28rSU1jVGx4VGxCNEFSdVNXdG1RdzJrQmVLSXFrTCsvY1VvVmRlZkVnMzJKTG1lVWJJT2RXQWE0Mm9rU1V0V0E5L1ZBdzY3RU1aTVdUR3lMZHFNVzE0RzhwM3RLeUk1S0YzTkJVVmF2Ly9R"></span>
+              <span class="color-option" style="background-color: #333333;" data-color="black" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-black?wid=5120&hei=2880&fmt=webp&qlt=70&.v=UXp1U3VDY3IyR1hNdHZwdFdOLzg1V0tFK1lhSCtYSGRqMUdhR284NTN4OUFsUUpuUVQ3cUdJUXc0NW5mTVpFdE9MekhWSGZtV1pvV240QzNuTk80VXhseHVZcEw1SmhqcElaQkJMTm9FMzlKVGsyNDdnTWJxWHVYZ20wTDc3dFA&traceId=1></span>
+              <span class="color-option" style="background-color: #f5f5f7;" data-color="white" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-white?wid=5120&hei=2880&fmt=webp&qlt=70&.v=UXp1U3VDY3IyR1hNdHZwdFdOLzg1V0tFK1lhSCtYSGRqMUdhR284NTN4OWhabGVFdVhnaExpMWhzbVh0SzhIT09MekhWSGZtV1pvV240QzNuTk80VXhseHVZcEw1SmhqcElaQkJMTm9FMytjRGRjd0V1bkY3a0xXbUtlY3VlTmc&traceId=1></span>
+              <span class="color-option" style="background-color: #e767eb;" data-color="pink" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-pink?wid=5120&hei=2880&fmt=webp&qlt=70&.v=UXp1U3VDY3IyR1hNdHZwdFdOLzg1V0tFK1lhSCtYSGRqMUdhR284NTN4OUtONFJuV1pCdWVXaWp6ZXpQQi9FWXF2TWlpSzUzejRCZGt2SjJUNGl1VEtsS0dZaHBma3VTb3UwU2F6dkc4TGZqTWwxUjR3emtKcFNGYngyU0EvOWU&traceId=1></span>
+              <span class="color-option" style="background-color: #76de92;" data-color="teal" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-teal?wid=5120&hei=2880&fmt=webp&qlt=70&.v=UXp1U3VDY3IyR1hNdHZwdFdOLzg1V0tFK1lhSCtYSGRqMUdhR284NTN4L29KblRMQzVUOE4vMXpkMWtFcm9GcXF2TWlpSzUzejRCZGt2SjJUNGl1VEtsS0dZaHBma3VTb3UwU2F6dkc4TGRaWWVaY3B6VTFTdVNEWDF2OTRBYlY&traceId=1></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="10" data-category="iphone">
+          <div class="product-badge">New</div>
+          <img src=https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone16pro-digitalmat-gallery-1-202409_GEO_US?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=1723843057490 alt="iPhone 16 Pro Natural Titanium" />
+          <div class="product-info">
+            <h3>iPhone 16 Pro</h3>
+            <p class="product-desc">Pro camera. Pro display. Pro performance.</p>
+            <p class="price">From $1099.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #5d5a4d;" data-color="Desert Titanium" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch_AV1?wid=5120&hei=2880&fmt=webp&qlt=70&.v=eUdsd0dIb3VUOXdtWkY0VFUwVE8vbEdkZHNlSjBQRklnaFB2d3I5MW94NkNpOHVpN2R5VUJjZHdaZUw2U1IwaWxjZnhHRHJyenVmME5KTm9Sd1ZaU2hpQnMxbm94Rm1tUTd1RDVsQXdjSzJpZHVHMUZLaU5RYVppZElabURWRndGblJodVFEaGgxMERMNjl1RlVMTnp3&traceId=1"></span>
+              <span class="color-option" style="background-color: #babac2;" data-color="Natural Titanium" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch-naturaltitanium?wid=5120&hei=2880&fmt=webp&qlt=70&.v=eUdsd0dIb3VUOXdtWkY0VFUwVE8vbEdkZHNlSjBQRklnaFB2d3I5MW94NVJrY0tZVVQzOFFrQ2FwbFZZamEzeEpOZTBYalh5Vk90cEc1K2wwRzFGejRMeXJHUnUva2huMjl4akFHOXNwVjA0YXFmK3VWSWZuRE9oVEFyUFR0T2hWSm5HQVhUeDlTTVJFSzVnTlpqdUV3&traceId=1></span>
+              <span class="color-option" style="background-color: #d0d4dc;" data-color="White Titanium" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch-whitetitanium?wid=5120&hei=2880&fmt=webp&qlt=70&.v=eUdsd0dIb3VUOXdtWkY0VFUwVE8vbEdkZHNlSjBQRklnaFB2d3I5MW94NkppVHhtRktGckFBd2ZPSmpuTHdJcWlCQmV2WTA2cncybDF2YzFnKzI0S2prMCtUNWwzYWR0UVU3TWVsbEdUeXZka3Q2dVFYV2lxTm4wNXBJcGZoM1QzVmtFSHJkUURvdVZmQktGTnNPd1Z3&traceId=1></span>
+              <span class="color-option" style="background-color: #2e2e2e;" data-color="Black Titanium" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch-blacktitanium?wid=5120&hei=2880&fmt=webp&qlt=70&.v=eUdsd0dIb3VUOXdtWkY0VFUwVE8vbEdkZHNlSjBQRklnaFB2d3I5MW94NzFzS1BRRzA4NTJUci9vckVTY21rM2lCQmV2WTA2cncybDF2YzFnKzI0S2prMCtUNWwzYWR0UVU3TWVsbEdUeXZka3Q2dVFYV2lxTm4wNXBJcGZoM1RkcERRMUVIWTBwNlRNS3dVelNTTTVB&traceId=1></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="11" data-category="iphone">
+          <img src=https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone15-digitalmat-gallery-1-202309_GEO_US?wid=728&hei=666&fmt=png-alpha&.v=1693346853617 alt="iPhone 15 Blue" />
+          <div class="product-info">
+            <h3>iPhone 15</h3>
+            <p class="product-desc">A total powerhouse with Dynamic Island.</p>
+            <p class="price">From $799.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #6e9add;" data-color="blue" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-blue?wid=5120&hei=2880&fmt=webp&qlt=70&.v=cHJOTXEwTU92OEtKVDV2cVB1R2FTSjlERndlRTljaUdZeHJGM3dlLzR2OGlYQ0tYMHd1OS9ZREtnNzFSR1owOHF2TWlpSzUzejRCZGt2SjJUNGl1VEtsS0dZaHBma3VTb3UwU2F6dkc4TGZPaDVjV2NEQVBZbTZldUQyWkpKRHk&traceId=1></span>
+              <span class="color-option" style="background-color: #272727;" data-color="black" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black?wid=5120&hei=2880&fmt=webp&qlt=70&.v=cHJOTXEwTU92OEtKVDV2cVB1R2FTSjlERndlRTljaUdZeHJGM3dlLzR2OUFsUUpuUVQ3cUdJUXc0NW5mTVpFdE9MekhWSGZtV1pvV240QzNuTk80VXhseHVZcEw1SmhqcElaQkJMTm9FMytEdlJGYjQxc1NwMWpTZjJjMXIvZnE&traceId=1></span>
+              <span class="color-option" style="background-color: #e56ee1;" data-color="pink" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-pink?wid=5120&hei=2880&fmt=webp&qlt=70&.v=cHJOTXEwTU92OEtKVDV2cVB1R2FTSjlERndlRTljaUdZeHJGM3dlLzR2OUtONFJuV1pCdWVXaWp6ZXpQQi9FWXF2TWlpSzUzejRCZGt2SjJUNGl1VEtsS0dZaHBma3VTb3UwU2F6dkc4TGV4VWh5Y2UwMXBvc0pMNmE5MmxpdHg&traceId=1></span>
+              <span class="color-option" style="background-color: #8effb2;" data-color="green" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-green?wid=5120&hei=2880&fmt=webp&qlt=70&.v=cHJOTXEwTU92OEtKVDV2cVB1R2FTSjlERndlRTljaUdZeHJGM3dlLzR2OVN1RVI4NjBlOTAxZFZncWlrRCtEV09MekhWSGZtV1pvV240QzNuTk80VXhseHVZcEw1SmhqcElaQkJMTm9FMzhTOVdVSFMvNkcyTDFvZWFCZUtsU3g&traceId=1></span>
+              <span class="color-option" style="background-color: #f7ff8e;" data-color="yellow" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-yellow?wid=5120&hei=2880&fmt=webp&qlt=70&.v=cHJOTXEwTU92OEtKVDV2cVB1R2FTSjlERndlRTljaUdZeHJGM3dlLzR2OVBYaW5IbkNlYTVSSU9KZTY4cW9ENTBoUVhuTWlrY2hIK090ZGZZbk9HeE1xUVVnSHY5eU9CcGxDMkFhalkvT0R2N1VyNEplcjgvcjN0dkF3OE9LSmZmbW94YnYxc1YvNXZ4emJGL0IxNFp3&traceId=1></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="12" data-category="iphone">
+          <img src=https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone16e-digitalmat-gallery-1-202502_GEO_US?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=1738706423809 alt="iPhone 16e Black" />
+          <div class="product-info">
+            <h3>iPhone 16e</h3>
+            <p class="product-desc">Serious power. Serious value.</p>
+            <p class="price">From $429.00</p>
+            <div class="color-options">
+              <div class="color-option" style="background-color: #1f1f1f;" data-color="midnight" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16e-finish-select-202502-black?wid=5120&hei=2880&fmt=webp&qlt=70&.v=bGxrMXRYSllVRTZGbi82ZklwWis2L1E4VHZqM2p1UHFJc1owKzJEcWVyUTBHUk0xampKNG9lbGhBOGJDblFiazg5ZFJsR0hrQnFVeEVSbnU0TWlpU0dSMjFQbWROWjJPYy9mb3VMRjFSOU01WlFMRld4TzIreHYyNVVpNmV3VGM&traceId=1></div>
+              <div class="color-option" style="background-color: #ffffff;" data-color="starlight" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16e-finish-select-202502-white?wid=5120&hei=2880&fmt=webp&qlt=70&.v=bGxrMXRYSllVRTZGbi82ZklwWis2L1E4VHZqM2p1UHFJc1owKzJEcWVyUThVUkp0MjdUS1RYNitOS3F5TDJoSTg5ZFJsR0hrQnFVeEVSbnU0TWlpU0dSMjFQbWROWjJPYy9mb3VMRjFSOU1HNlNKOWI4NHM4TnBKUkRhNkdlc2U&traceId=1></div>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mac Section -->
+    <section id="macs" class="product-section">
+      <div class="section-header">
+        <h2>Mac</h2>
+        <a href="#" class="view-all">View all <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="product-grid">
+        <div class="product-card" data-id="2" data-category="mac">
+          <div class="product-badge">New</div>
+          <img src=https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mba15-skyblue-config-202503?wid=840&hei=498&fmt=jpeg&qlt=90&.v=1739918914916 alt="MacBook Air M3 Midnight" />
+          <div class="product-info">
+            <h3>MacBook Air</h3>
+            <p class="product-desc">Supercharged by M3 chip.</p>
+            <p class="price">From $1099.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #9cb3e3;" data-color="sky blue" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mba15-skyblue-config-202503?wid=840&hei=498&fmt=jpeg&qlt=90&.v=1739918914916"></span>
+              <span class="color-option" style="background-color: #b1b4bb;" data-color="silver" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mba15-silver-config-202503?wid=840&hei=498&fmt=jpeg&qlt=90&.v=1739918914494"></span>
+              <span class="color-option" style="background-color: #f9d4c0;" data-color="starlight" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mba15-starlight-config-202503?wid=840&hei=498&fmt=jpeg&qlt=90&.v=1739918914926"></span>
+              <span class="color-option" style="background-color: #393f41;" data-color="Midnight" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mba15-midnight-config-202503?wid=840&hei=498&fmt=jpeg&qlt=90&.v=1739918914821"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="3" data-category="mac">
+          <img src = https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1728916305295 alt="MacBook Pro Space Gray" />
+          <div class="product-info">
+            <h3>MacBook Pro</h3>
+            <p class="product-desc">Pro anywhere with M3, M3 Pro, or M3 Max chip.</p>
+            <p class="price">From $1599.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #505456;" data-color="spacegray" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spaceblack-cto-hero-202410?wid=840&hei=504&fmt=jpeg&qlt=90&.v=1731525368099"></span>
+              <span class="color-option" style="background-color: #e3e4e6;" data-color="silver" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-silver-cto-hero-202410?wid=840&hei=504&fmt=jpeg&qlt=90&.v=1731525367704"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="4" data-category="mac">
+          <img src=https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-blue-cto-hero-202410?wid=860&hei=778&fmt=jpeg&qlt=90&.v=1729011694581 alt="iMac 24-inch Blue" />
+          <div class="product-info">
+            <h3>iMac</h3>
+            <p class="product-desc">All-in-one with M3 chip and stunning design.</p>
+            <p class="price">From $1299.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #60c0e3;" data-color="blue" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-blue-cto-hero-202410?wid=860&hei=778&fmt=jpeg&qlt=90&.v=1729011694581"></span>
+              <span class="color-option" style="background-color: #ff7a66;" data-color="orange" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-orange-cto-hero-202410?wid=860&hei=778&fmt=jpeg&qlt=90&.v=1729011694690"></span>
+              <span class="color-option" style="background-color: #72c175;" data-color="green" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-green-cto-hero-202410?wid=860&hei=778&fmt=jpeg&qlt=90&.v=1729011694506"></span>
+              <span class="color-option" style="background-color: #e9ecef;" data-color="silver" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-silver-cto-hero-202410?wid=860&hei=778&fmt=jpeg&qlt=90&.v=1729011694789"></span>
+              <span class="color-option" style="background-color: #fde7c5;" data-color="yellow" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-yellow-cto-hero-202410?wid=860&hei=778&fmt=jpeg&qlt=90&.v=1729011694829"></span>
+              <span class="color-option" style="background-color: #dca9d7;" data-color="purple" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-purple-cto-hero-202410?wid=860&hei=778&fmt=jpeg&qlt=90&.v=1729011694749"></span>
+              <span class="color-option" style="background-color: #ff5a57;" data-color="pink" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-pink-cto-hero-202410?wid=860&hei=778&fmt=jpeg&qlt=90&.v=1729011696618"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="13" data-category="mac">
+          <img src=https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-hero-202410?wid=772&hei=466&fmt=jpeg&qlt=90&.v=1728622183198 alt="Mac mini" />
+          <div class="product-info">
+            <h3>Mac mini</h3>
+            <p class="product-desc">More muscle. More hustle. M3 or M3 Pro.</p>
+            <p class="price">From $599.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #b1b3b6;"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="14" data-category="mac">
+          <img src=https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-studio-hero-202503?wid=834&hei=408&fmt=jpeg&qlt=90&.v=1739182707894 alt = "Mac Studio" />
+            <h3>Mac Studio</h3>
+            <p class="product-desc">Supercharged by M2 Max or M2 Ultra.</p>
+            <p class="price">From $1999.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #b1b3b6;"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- iPad Section -->
+    <section id="ipads" class="product-section">
+      <div class="section-header">
+        <h2>iPad</h2>
+        <a href="#" class="view-all">View all <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="product-grid">
+        <div class="product-card" data-id="5" data-category="ipad">
+          <div class="product-badge">New</div>
+          <img src=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-model-select-gallery-1-202405?wid=5120&hei=2880&fmt=webp&qlt=70&.v=cXN0QTVTNDBtbGIzcy91THBPRThnNE5sSFgwakNWNmlhZ2d5NGpHdllWY09WV3R2ZHdZMXRzTjZIcWdMTlg4eUJQYkhSV3V1dC9oa0s5K3lqMGtUaFMvR01EVDlzK0hIS1J2bTdpY0pVeTF1Yy9kL1dQa3EzdWh4Nzk1ZnZTYWY&traceId=1 alt="iPad Pro" />
+          <div class="product-info">
+            <h3>iPad Pro</h3>
+            <p class="product-desc">Supercharged by M2 chip. Brilliant Liquid Retina XDR display.</p>
+            <p class="price">From $999.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #2c2c2c;"  data-color="black" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-storage-select-202405-11inch-spaceblack?wid=5120&hei=2880&fmt=webp&qlt=70&.v=czlRMVFIQnlSdTl0T3ZTQUtJUW9rMm5pQUoxb0NIVEJFSjRVRzZ4dzV5U084L3FLU0dJZkUwMnBPUzM3WW1oOThLcXQxZ1h0QThIT2dnUm5qbGk5OUJkSERIUjY1Wk1Od3FtNjF6NFZLVXQzK0Nka0JlUVpONXJZVk0yS0ZIRU1FOWxHZllNZjgxcVdxWWcxZHBON3R3&traceId=1"></span>
+              <span class="color-option" style="background-color: #c2cbcf;" data-color="silver" data-image= "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-finish-select-202405-11inch-silver?wid=5120&hei=2880&fmt=webp&qlt=70&.v=YXpaUEtKWGhlNnNrVGZkTEo4T0xsNEsrMGFueUl5dllOTm9xWTIwTHNieUJLNkVlVkZpVE5VcEU5RHJDbXpCOXF2TWlpSzUzejRCZGt2SjJUNGl1VEtsS0dZaHBma3VTb3UwU2F6dkc4TGUvQ0hVc0dNMTRHeWE3dDZOT0ZZVDk&traceId=1"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="6" data-category="ipad">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipadair11-digitalmat-gallery-1-202404?wid=728&hei=666&fmt=jpeg&qlt=90&.v=1713308648429" alt="iPad Air" />
+          <div class="product-info">
+            <h3>iPad Air</h3>
+            <p class="product-desc">Serious performance in a thin and light design.</p>
+            <p class="price">From $599.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #9f9f9f;" data-color="Space Gray" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-air-finish-select-gallery-202405-11inch-space-gray?wid=5120&hei=2880&fmt=webp&qlt=70&.v=SzlUeW5ITUpKK1FKdDdNS0xNUVhmM3hxSU9Rc1hENld5ZlZGbisxZU9hWHRiNzVnbmkvN1ZZYkRMenpIV2Q5emdCOVI4SUNZWW56UDRQN0hkK2RSSEFDb1F2RTNvUEVHRkpGaGtOSVFHalBTUFBNZ0M4MTl3aXZXQVpzNHkwVnkrUjFWME04VFo1RjFVZk82TGFEcklB&traceId=1"></span>
+              <span class="color-option" style="background-color: #6f90fa;" data-color="blue" data-image=https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-air-finish-select-gallery-202405-11inch-blue?wid=5120&hei=2880&fmt=webp&qlt=70&.v=SzlUeW5ITUpKK1FKdDdNS0xNUVhmM3hxSU9Rc1hENld5ZlZGbisxZU9hWGRlMXlKa0I0YW1HYXZ1YmxLanZlSjhHVUZrb2Ixc1JuUHord2JOR2ZkK1NYR1ZZZnEyMVlVQUliTThGMjNyaFEvUlllS3I5bndwT3p0Zm9aOExUTkZnakxaYXlYRlpuQ3lsMkg2elJJWFF3&traceId=1"></span>
+              <span class="color-option" style="background-color: #c479ef;" data-color="Purple" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-air-finish-select-gallery-202405-11inch-purple?wid=5120&hei=2880&fmt=webp&qlt=70&.v=SzlUeW5ITUpKK1FKdDdNS0xNUVhmM3hxSU9Rc1hENld5ZlZGbisxZU9hWGppRWZOQnp0enNNOGxnWG5CWjM0cEFhNWVnQTVuNnB6b2ZHNThYb1l4QmhNQnJMcnc4RkxJd3ZMc3hKZVVFWHV2UXBnQ1RVOU1OQ0ExN1BEclVkdXMzaEFRbkFneFdSaE5OUlkwUXVqMzN3&traceId=1"></span>
+              <span class="color-option" style="background-color: #d6b883;" data-color="Starlight" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-air-finish-select-gallery-202405-11inch-starlight?wid=5120&hei=2880&fmt=webp&qlt=70&.v=SzlUeW5ITUpKK1FKdDdNS0xNUVhmM3hxSU9Rc1hENld5ZlZGbisxZU9hVXlqbll3NTROaWV5dFVzVHJXRktkeE5ENXNjWmVRajlEQ1llUnJ3MTFUUmdUMngwVnJycmY0WkN2ZnNvOUpFNFV2eGpBMC9iUGh4eWtiNXU0bkNWTXRQOHpHVXpBMUZsZVBGRndaV293SUFB&traceId=1"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="7" data-category="ipad">
+          <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-model-unselect-gallery-1-202503?wid=5120&hei=2880&fmt=webp&qlt=70&.v=dktPcGxtcUZybE1aYXJWSm5YZmZNcWpkNHRJWDMzcTg3NWRxV0pydTcvS1pZTFhDUDF5UmZhMm9PVnhwR3ovWkR1ak1SbkZpQ0hqY2xBWWtPMjVFUVhqWm94bmwvRkhZb2JhMGhUR3NrY3JkQWNMRTQvTm5CaExDd2tYYjFOQjk&traceId=1" alt="iPad" />
+          <div class="product-info">
+            <h3>iPad</h3>
+            <p class="product-desc">Colorfully capable with A14 Bionic chip.</p>
+            <p class="price">From $449.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #4d61d1;"  data-color="blue" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-finish-select-202503-blue?wid=5120&hei=2880&fmt=webp&qlt=70&.v=aHYyeWZ6TVBzTWw5WlZ2bFJCZno2cjdIcnY1QlRYMFlvWlhuNHdTVUZQS1Z4L0VZT3V2TzUvUTBrMmhIQlZsS0dJR3pXZWpFV2FaRHU0UG1VREJ3cmNRZ2ZhNWVISml5WG1SY0E5S0hPaFoyUXQrc1F4VFIwcWJZNzNTUVpwSTY&traceId=1"></span>
+              <span class="color-option" style="background-color: #fb7cff;" data-color="pink" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-finish-select-202503-pink?wid=5120&hei=2880&fmt=webp&qlt=70&.v=aHYyeWZ6TVBzTWw5WlZ2bFJCZno2bmpGRXhPTWFHODdWMEIzOHlrYlFER1Z4L0VZT3V2TzUvUTBrMmhIQlZsS0dJR3pXZWpFV2FaRHU0UG1VREJ3cmU1eWoxTG1NdHEwRjVGSDBkbFJ0Tlo3elJuQlNOb1hBU2ZGc01uK0d5YTU&traceId=1"></span>
+              <span class="color-option" style="background-color: #ccec80;" data-color="yellow" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-finish-select-202503-yellow?wid=5120&hei=2880&fmt=webp&qlt=70&.v=aHYyeWZ6TVBzTWw5WlZ2bFJCZno2dmxLd2s1MTdYS3kySi9lc3JWNEpTZndxcTNXQmUwRHdjNkNCR2VPV0wzMEYwY01kSHJsa3czQ3FiclhQaFVwUzMyeFlDQnRWcTdESVg4M1dQZ2Q5UHBnUXA1SWNaRk1iSitUcnNLY0t2MnM&traceId=1"></span>
+              <span class="color-option" style="background-color: #b2b2b2;" data-color="silver" data-image= "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-finish-select-202503-silver?wid=5120&hei=2880&fmt=webp&qlt=70&.v=aHYyeWZ6TVBzTWw5WlZ2bFJCZno2aG1NVnhJaVErcFhXcDJFUzZhbVJBcndxcTNXQmUwRHdjNkNCR2VPV0wzMEYwY01kSHJsa3czQ3FiclhQaFVwUzRwMWNnUCt6QXU1V2gvVU10d0M5aXBXWlVxR1pCcjZyMEpFMjROc0hrSmo&traceId=1"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="8" data-category="ipad">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-mini-digitalmat-gallery-1-202410?wid=730&hei=666&fmt=png-alpha&.v=1727279895834" alt="iPad mini" />
+          <div class="product-info">
+            <h3>iPad mini</h3>
+            <p class="product-desc">Mega power. Mini sized.</p>
+            <p class="price">From $499.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #b1b3b6;"  data-color="spacegray" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-mini-storage-select-gallery-202410-space-gray?wid=5120&hei=2880&fmt=webp&qlt=70&.v=bFU5N2g4aXJnREUycExQajkrUEtxVTRQdUZOUjNqOGs3RHc3NGcvUnpJb3NCQXp4M0lHOXF1dHJlMCs1UUlIbFFkNzk5MUhTY1J1b1lobFVhbXZVN1dKTG1lVWJJT2RXQWE0Mm9rU1V0V0RyNi9wUmRQRFNsWk9tVW92a0pGbzNIS2FnckNNVlFLeFBlV1FBTjN6ZEpn&traceId=1"></span>
+              <span class="color-option" style="background-color: #73a3f5;" data-color="blue" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-mini-finish-select-gallery-202410-blue?wid=5120&hei=2880&fmt=webp&qlt=70&.v=eDJDc00wczl1QWk5QmpVYitFNXQwN0Y2ME45L1lWWDhkYWVYaTNEZnBvQ1RCNTF1bzF3WCt4emVyUU51eEE3cXF2TWlpSzUzejRCZGt2SjJUNGl1VEtsS0dZaHBma3VTb3UwU2F6dkc4TGVCQ3Uxa2I4YTV1RDdTYWw1dHBwSUc&traceId=1"></span>
+              <span class="color-option" style="background-color: #d08bff;" data-color="purple" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-mini-finish-select-gallery-202410-purple?wid=5120&hei=2880&fmt=webp&qlt=70&.v=eDJDc00wczl1QWk5QmpVYitFNXQwN0Y2ME45L1lWWDhkYWVYaTNEZnBvQnhEKzZkSCtkR25mVXFUU2hSbWpZcDBoUVhuTWlrY2hIK090ZGZZbk9HeE1xUVVnSHY5eU9CcGxDMkFhalkvT0FQaGZkZWdabFFQdVZGSXJHdWFQdzZmbW94YnYxc1YvNXZ4emJGL0IxNFp3&traceId=1"></span>
+              <span class="color-option" style="background-color: #b9c8d0;" data-color="Starlight" data-image= "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-mini-finish-select-gallery-202410-starlight?wid=5120&hei=2880&fmt=webp&qlt=70&.v=eDJDc00wczl1QWk5QmpVYitFNXQwN0Y2ME45L1lWWDhkYWVYaTNEZnBvRFV5cndHazlKcHZSL01JcVNkd3dCcjhLcXQxZ1h0QThIT2dnUm5qbGk5OUJkSERIUjY1Wk1Od3FtNjF6NFZLVXQ5WnRVYitrc2I2aXh5K20xNmxTY3R3Ulk2d01JOWs1c1plVDVOUjQ5RjV3&traceId=1"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="16" data-category="ipad">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MUWA3?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=1695933856697" alt="Apple Pencil" />
+          <div class="product-info">
+            <h3>Apple Pencil</h3>
+            <p class="product-desc">Dream it up. Jot it down.</p>
+            <p class="price">From $129.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #ffffff;"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="17" data-category="ipad">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDP3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1664481446939" alt="Magic Keyboard" />
+          <div class="product-info">
+            <h3>Magic Keyboard</h3>
+            <p class="product-desc">The perfect companion for iPad Pro.</p>
+            <p class="price">From $299.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #f5f5f7;"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apple Watch Section -->
+    <section id="watches" class="product-section">
+      <div class="section-header">
+        <h2>Apple Watch</h2>
+        <a href="#" class="view-all">View all <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="product-grid">
+        <div class="product-card" data-id="9" data-category="watch">
+          <div class="product-badge">New</div>
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/s10-case-unselect-gallery-1-202503?wid=5120&hei=3280&fmt=p-jpg&qlt=80&.v=1739305300233" alt="Apple Watch Series 10" />
+          <div class="product-info">
+            <h3>Apple Watch Series 10</h3>
+            <p class="product-desc">Our most advanced health features yet.</p>
+            <p class="price">From $399.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #2e2c2b;" data-color="Aluminum" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/s10-case-select-202409-aluminum-jet-black?wid=5120&hei=3280&fmt=p-jpg&qlt=80&.v=M1ZjVk10NTM5cklGOWg0bWd3ekdVQWlXSFRqWXRGNnhKeUxOQ2lwTm4wV2NIZjB2Y2x5b05WU00vQnBZNmczamZvSGF2dFhlaXl5ZzZDVTRMdEVvNldmalN5dlRpR2R3QUc1RGJwYllnWmp6SFRnVE95VG1ZWlVONys5RnIyTzk"></span>
+              <span class="color-option" style="background-color: #3a3a31;" data-color="Titanium" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/s10-case-select-202409-titanium-slate?wid=5120&hei=3280&fmt=p-jpg&qlt=80&.v=M1ZjVk10NTM5cklGOWg0bWd3ekdVUG94VW9MZXhZMGVUNnNWU0xBZEdrTDFMK1hVVzdqNDZOaUhUc3FVZlBBUVN4akdjaWsxOXRHMzdmYXdzRTJINlVWaW0rZGRJaXlMSFZJZmswd3JmTG05akxVajJ4Z2x2VjVCaFJQVGtydSs"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="20" data-category="watch">
+          <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ultra-case-select-202409-black?wid=5120&hei=3280&fmt=p-jpg&qlt=80&.v=eklmRkg1SGV0cnBBRkZsU1d5OTdqeFJWRHlxMXdUTkJJUzFjYW1IUGJZaXRQaHRXQmg1Smw1K0VETVJwK2N3R3ZGdXpoZGFjcnJiZGtXTlNNRSszQWhzTVppMFJoTE5tV3FBT3NZbEtHWE5Hb0YwOVp1c2paOFFJN3lGN0lGY2I" alt="Apple Watch Ultra" />
+          <div class="product-info">
+            <h3>Apple Watch Ultra 2</h3>
+            <p class="product-desc">Adventure awaits.</p>
+            <p class="price">From $799.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: rgb(41, 41, 41);" data-color = "Titanium" data-image = "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ultra-case-select-202409-black?wid=5120&hei=3280&fmt=p-jpg&qlt=80&.v=eklmRkg1SGV0cnBBRkZsU1d5OTdqeFJWRHlxMXdUTkJJUzFjYW1IUGJZaXRQaHRXQmg1Smw1K0VETVJwK2N3R3ZGdXpoZGFjcnJiZGtXTlNNRSszQWhzTVppMFJoTE5tV3FBT3NZbEtHWE5Hb0YwOVp1c2paOFFJN3lGN0lGY2I"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="21" data-category="watch">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/se-case-unselect-gallery-1-202409?wid=5120&hei=3280&fmt=p-jpg&qlt=80&.v=1739391959456" alt="Apple Watch SE" />
+          <div class="product-info">
+            <h3>Apple Watch SE</h3>
+            <p class="product-desc">Essential features at a great value.</p>
+            <p class="price">From $249.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #262a30;" data-color="Midnight"  data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/se-case-select-202409-midnight?wid=5120&hei=3280&fmt=p-jpg&qlt=80&.v=Kzl5VjJlYy8yNE5uZ1M0cU0rKzBvQTc1SWFYUUo3NGkvUVhTMm1jSWFObXRQaHRXQmg1Smw1K0VETVJwK2N3R3ZGdXpoZGFjcnJiZGtXTlNNRSszQWlHQjFIQ0c2VUJhcXRGdmdNWURJUnZXNm9oamhpbmdGcHIwa2hOU3lmQkw"></span>
+              <span class="color-option" style="background-color: #b2bed8;" data-color="Starlight"  data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/se-case-select-202409-starlight?wid=5120&hei=3280&fmt=p-jpg&qlt=80&.v=Kzl5VjJlYy8yNE5uZ1M0cU0rKzBvTXdRZEtzdGxFQUd1TVdOWE9KUDR4a1I3Z0VwcktLcHpDNVRjZXc0RllqakprY3crUWRsN1dqVjRnMHR5S1hVbk1hTzNvZUZXTmFuN2dpcFIzM1E3OXZaRCttakVNV0czQUpIUWRYQjJScHo"></span>
+              <span class="color-option" style="background-color: #bbbbbb;" data-color="Silver" data-image="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/se-case-select-202409-silver?wid=5120&hei=3280&fmt=p-jpg&qlt=80&.v=Kzl5VjJlYy8yNE5uZ1M0cU0rKzBvRCtCdEMrMG9pMG1rN2pxWmp0OTVXa013bG4rTWZBc1ZsWHZBa2RIMFdsRU1BZktNRDRIeDREMEYwa1NOSWNvMEpjY1JlOS9DR2hmam9TWHFkU1hOQTErYWpGdS9XeFgvbS9ITnNYOEhYaG4"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AirPods Section -->
+    <section id="airpods" class="product-section">
+      <div class="section-header">
+        <h2>AirPods</h2>
+        <a href="#" class="view-all">View all <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="product-grid">
+        <div class="product-card" data-id="24" data-category="airpods">
+          <div class="product-badge">New</div>
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-2-hero-select-202409?wid=976&hei=916&fmt=jpeg&qlt=90&.v=1724041669458" alt="AirPods Pro" />
+          <div class="product-info">
+            <h3>AirPods Pro</h3>
+            <p class="product-desc">Active Noise Cancellation and Adaptive Transparency.</p>
+            <p class="price">$249.00</p>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="25" data-category="airpods">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-4-anc-select-202409_FV1?wid=976&hei=916&fmt=jpeg&qlt=90&.v=1725502554118" alt="AirPods (4th generation)" />
+          <div class="product-info">
+            <h3>AirPods (4th generation)</h3>
+            <p class="product-desc">Spatial Audio with dynamic head tracking.</p>
+            <p class="price">$179.00</p>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="27" data-category="airpods">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-hero-select-202409?wid=976&hei=916&fmt=jpeg&qlt=90&.v=1725492700483" alt="AirPods Max" />
+          <div class="product-info">
+            <h3>AirPods Max</h3>
+            <p class="product-desc">High-fidelity audio with Active Noise Cancellation.</p>
+            <p class="price">$549.00</p>
+            <div class="color-options">
+              <span class="color-option selected" style="background-color: #90c3db;" data-color="sky-blue" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-202409-blue_FV1?wid=976&hei=916&fmt=jpeg&qlt=90&.v=1724927052173"></span>
+              <span class="color-option" style="background-color: #bfbfd4;" data-color="Midnight" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-202409-midnight_FV1?wid=976&hei=916&fmt=jpeg&qlt=90&.v=1724927052268"></span>
+              <span class="color-option" style="background-color: #4a433b;" data-color="Starlight" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-202409-starlight_FV1?wid=976&hei=916&fmt=jpeg&qlt=90&.v=1724927052398"></span>
+              <span class="color-option" style="background-color: #9150c3;" data-color="purple" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-202409-purple_FV1?wid=976&hei=916&fmt=jpeg&qlt=90&.v=1724927052158"></span>
+              <span class="color-option" style="background-color: #e29141;" data-color="orange" data-image="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-202409-orange_FV1?wid=976&hei=916&fmt=jpeg&qlt=90&.v=1724927052299"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section id="accessories" class="product-section">
+      <div class="section-header">
+        <h2>Accessories</h2>
+        <a href="#" class="view-all">View all <i class="fas fa-chevron-right"></i></a>
+        </div>  
+      <div class="product-grid">
+        <div class="product-card" data-id="8" data-category="accessories">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MX6X3?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=1724257154789" alt="MagSafe Charger" />
+          <div class="product-info">
+            <h3>MagSafe Charger</h3>
+            <p class="product-desc">Wireless charging for iPhone.</p>
+            <p class="price">$39.00</p>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="9" data-category="accessories">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MA7G4?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=1723856728385" alt="AirTag" />
+          <div class="product-info">
+            <h3>AirTag</h3>
+            <p class="product-desc">Keep track of your items.</p>
+            <p class="price">$29.00</p>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="26" data-category="accessories">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MJWY3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1625613219000" alt="MagSafe Battery Pack" />
+          <div class="product-info">
+            <h3>MagSafe Battery Pack</h3>
+            <p class="product-desc">Portable wireless charging for iPhone.</p>
+            <p class="price">$99.00</p>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="27" data-category="accessories">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MX4A2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1618028917000" alt="AirTag Loop" />
+          <div class="product-info">
+            <h3>AirTag Loop</h3>
+            <p class="product-desc">Secure AirTag to your belongings.</p>
+            <p class="price">$29.00</p>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="28" data-category="accessories">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MA7E4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723930332796" alt="iphone Case" />
+          <div class="product-info">
+            <h3>iphone Case</h3>
+            <p class="product-desc">Protect your AirPods in style.</p>
+            <p class="price">$29.00</p>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-id="29" data-category="accessories">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-mini-select-202210?wid=1080&hei=880&fmt=jpeg&qlt=90&.v=1720816295293" alt="HomePod mini" />
+          <div class="product-info">
+            <h3>HomePod mini</h3>
+            <p class="product-desc">Room-filling sound in a compact speaker.</p>
+            <p class="price">$99.00</p>
+            <div class="color-options">
+              <span class="color-option" style="background-color: #223b85;" data-color="blue"   data-image= "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-mini-select-blue-202110_FV1?wid=1868&hei=880&fmt=jpeg&qlt=90&.v=1633086025000"></span>
+              <span class="color-option" style="background-color: #f5f5f7;" data-color="white"   data-image= "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-mini-select-white-202110_FV1?wid=1868&hei=880&fmt=jpeg&qlt=90&.v=1633086025000"></span>
+              <span class="color-option" style="background-color: #ffbb45;" data-color="yellow"   data-image= "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-mini-select-yellow-202110_FV1?wid=1868&hei=880&fmt=jpeg&qlt=90&.v=1633086026000"></span>
+              <span class="color-option" style="background-color: #d3302e;" data-color="orange"   data-image= "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-mini-select-orange-202110_FV1?wid=1868&hei=880&fmt=jpeg&qlt=90&.v=1633086020000"></span>
+              <span class="color-option" style="background-color: #1e2729;" data-color="Midnight"   data-image ="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/homepod-mini-select-midnight-202407_FV1?wid=1868&hei=880&fmt=jpeg&qlt=90&.v=1719853980412"></span>
+            </div>
+            <div class="add-to-cart-container">
+              <button class="view-details">View Details</button>
+              <button class="add-to-cart btn">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shop the Apple Store Difference Section -->
+  <section class="apple-store-difference">
+    <div class="animated-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="difference-container">
+      <h2>Shop the Apple Store difference</h2>
+      <div class="difference-grid">
+        <div class="difference-item">
+          <div class="difference-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M18 3C9.716 3 3 9.716 3 18C3 26.284 9.716 33 18 33C26.284 33 33 26.284 33 18C33 9.716 26.284 3 18 3ZM18 6C24.627 6 30 11.373 30 18C30 24.627 24.627 30 18 30C11.373 30 6 24.627 6 18C6 11.373 11.373 6 18 6Z" fill="currentColor"/>
+              <path d="M23 13L13 23M13 13L23 23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12.5 15.5L15.5 12.5M20.5 23.5L23.5 20.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Customize your Mac or create a style statement</h3>
+          <p>Engrave a mix of emoji, names, and numbers for free on select products only at Apple.</p>
+          <a href="#" class="difference-link">Learn about personalization <span class="difference-arrow">›</span></a>
+        </div>
+        
+        <div class="difference-item">
+          <div class="difference-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M31 18.5C31 13.5 26.5 9 18 9C9.5 9 5 13.5 5 18.5C5 23.5 9.5 28 18 28C26.5 28 31 23.5 31 18.5Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M18 9V28" stroke="currentColor" stroke-width="2"/>
+              <path d="M5 18.5H31" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Shop with specialists by chat, video, phone or in store</h3>
+          <p>Get expert service and support at an Apple Store or from the convenience of your home.</p>
+          <a href="#" class="difference-link">Learn about shopping options <span class="difference-arrow">›</span></a>
+        </div>
+        
+        <div class="difference-item">
+          <div class="difference-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <rect x="8" y="9" width="20" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M13 14H23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 19H23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 24H18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Flexible ways to pay</h3>
+          <p>Choose credit or debit card, Apple Card, or pay in full. You can also spread the cost with low monthly payments.</p>
+          <a href="#" class="difference-link">Learn about payment options <span class="difference-arrow">›</span></a>
+        </div>
+        
+        <div class="difference-item">
+          <div class="difference-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M9 25L9 11C9 9.89543 9.89543 9 11 9L25 9C26.1046 9 27 9.89543 27 11L27 25C27 26.1046 26.1046 27 25 27L11 27C9.89543 27 9 26.1046 9 25Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M22 16L18 20L14 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Fast, free delivery or pickup</h3>
+          <p>Get free delivery or pickup at your Apple Store. Or add faster shipping at checkout for a fee.</p>
+          <a href="#" class="difference-link">Learn about delivery <span class="difference-arrow">›</span></a>
+        </div>
+      </div>
+      <div class="difference-action">
+        <button class="difference-btn">Explore all Apple Store services</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>Shop and Learn</h3>
+          <ul>
+            <li><a href="#">Store</a></li>
+            <li><a href="#iphones">iPhone</a></li>
+            <li><a href="#macs">Mac</a></li>
+            <li><a href="#ipads">iPad</a></li>
+            <li><a href="#watches">Apple Watch</a></li>
+            <li><a href="#airpods">AirPods</a></li>
+            <li><a href="#accessories">Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">Apple Music</a></li>
+            <li><a href="#">Apple TV+</a></li>
+            <li><a href="#">Apple Fitness+</a></li>
+            <li><a href="#">Apple News+</a></li>
+            <li><a href="#">Apple Arcade</a></li>
+            <li><a href="#">iCloud</a></li>
+            <li><a href="#">Apple One</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Apple Store</h3>
+          <ul>
+            <li><a href="#">Find a Store</a></li>
+            <li><a href="#">Genius Bar</a></li>
+            <li><a href="#">Today at Apple</a></li>
+            <li><a href="#">Apple Camp</a></li>
+            <li><a href="#">Apple Store App</a></li>
+            <li><a href="#">Financing</a></li>
+            <li><a href="#">Order Status</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>About Apple</h3>
+          <ul>
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="#">Apple Leadership</a></li>
+            <li><a href="#">Career Opportunities</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Ethics & Compliance</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact Apple</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-info">
+          <p>More ways to shop: <a href="#">Find an Apple Store</a> or <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.</p>
+        </div>
+        
+        <div class="footer-legal">
+          <div class="footer-legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Sales and Refunds</a>
+            <a href="#">Legal</a>
+            <a href="#">Site Map</a>
+          </div>
+          <div class="footer-copyright">
+            <p>Copyright © 2023 Apple Inc. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Detail Modal -->
+  <div id="product-detail-modal" class="product-modal">
+    <button class="close-product-modal" aria-label="Close modal">×</button>
+    <div class="product-modal-content">
+      <div class="product-detail-container">
+        <div class="product-gallery">
+          <div class="main-image-container">
+            <img id="product-main-image" src="" alt="Product">
+          </div>
+          <div class="gallery-thumbnails">
+            <div class="thumbnail active">
+              <img src="" alt="Thumbnail 1">
+            </div>
+            <div class="thumbnail">
+              <img src="" alt="Thumbnail 2">
+            </div>
+            <div class="thumbnail">
+              <img src="" alt="Thumbnail 3">
+            </div>
+          </div>
+        </div>
+        <div class="product-info">
+          <h2 id="product-name"></h2>
+          <p id="product-price"></p>
+          <p id="product-description"></p>
+          
+          <div class="product-options">
+            <h3>Color</h3>
+            <div class="color-options">
+              <div class="color-option selected" style="background-color: #555555;"></div>
+              <div class="color-option" style="background-color: #f5f5f7;"></div>
+              <div class="color-option" style="background-color: #0071e3;"></div>
+            </div>
+            
+            <h3>Storage</h3>
+            <div class="storage-options">
+              <div class="storage-option">
+                <input type="radio" id="storage1" name="storage" checked>
+                <label for="storage1">
+                  <span class="storage-size">128GB</span>
+                  <span class="storage-price">+$0</span>
+                </label>
+              </div>
+              <div class="storage-option">
+                <input type="radio" id="storage2" name="storage">
+                <label for="storage2">
+                  <span class="storage-size">256GB</span>
+                  <span class="storage-price">+$100</span>
+                </label>
+              </div>
+              <div class="storage-option">
+                <input type="radio" id="storage3" name="storage">
+                <label for="storage3">
+                  <span class="storage-size">512GB</span>
+                  <span class="storage-price">+$300</span>
+                </label>
+              </div>
+            </div>
+            
+            <h3>Delivery</h3>
+            <div class="delivery-info">
+              <div class="delivery-option">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                </svg>
+                <div>
+                  <p class="delivery-title">Delivery</p>
+                  <p class="delivery-date">In Stock: Delivers in 1-3 business days</p>
+                </div>
+              </div>
+              <div class="delivery-option">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <div>
+                  <p class="delivery-title">Pickup</p>
+                  <p class="delivery-date">Available today at Apple Store</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="add-to-cart-container">
+            <button class="view-details">View Details</button>
+            <button class="add-to-cart btn">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Results Modal -->
+  <div id="nav-search-results">
+    <div class="search-header">
+      <div class="search-bar">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5,14,7.01,14,9.5,11.99,14,9.5,14z"/>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search apple.com" aria-label="Search apple.com">
+      </div>
+      <button id="close-search" aria-label="Close search">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero Info Modal -->
+  <div id="hero-info-modal" class="hero-modal">
+    <div class="hero-modal-backdrop"></div>
+    <div class="hero-modal-container">
+      <button class="close-hero-modal" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+      <div class="hero-modal-content">
+        <!-- Content will be dynamically inserted here -->
+        <div class="hero-info-header">
+          <h2 id="hero-info-title"></h2>
+          <p id="hero-info-subtitle"></p>
+        </div>
+        <div class="hero-info-body">
+          <div class="hero-info-image-container">
+            <img id="hero-info-image" src="" alt="Product information">
+          </div>
+          <div class="hero-info-text">
+            <div class="hero-info-section">
+              <h3 id="hero-info-feature1-title"></h3>
+              <p id="hero-info-feature1-text"></p>
+            </div>
+            <div class="hero-info-section">
+              <h3 id="hero-info-feature2-title"></h3>
+              <p id="hero-info-feature2-text"></p>
+            </div>
+            <div class="hero-info-section">
+              <h3 id="hero-info-feature3-title"></h3>
+              <p id="hero-info-feature3-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-info-footer">
+          <div class="hero-info-price-container">
+            <p class="hero-info-price-label">From</p>
+            <p id="hero-info-price" class="hero-info-price"></p>
+          </div>
+          <div class="hero-info-actions">
+            <a href="#" id="hero-info-buy" class="btn hero-info-buy-btn">Buy</a>
+            <a href="#" id="hero-info-explore" class="hero-info-explore-link">Explore all features <span class="hero-chevron">›</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Apple-Style Bag Panel -->
+  <div id="bag-panel" class="bag-panel">
+    <div class="bag-panel-content">
+      <div class="bag-panel-header">
+        <button id="close-bag" class="close-bag" aria-label="Close bag">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+        <h2>Your Bag</h2>
+        <div class="bag-count-container">
+          <span id="bag-count">0</span> items
+        </div>
+      </div>
+      
+      <div class="bag-panel-body">
+        <div id="bag-empty" class="bag-empty">
+          <svg xmlns="http://www.w3.org/2000/svg" width="70" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <p>Your Bag is empty.</p>
+          <button class="continue-shopping" id="continue-shopping-btn">Continue Shopping</button>
+        </div>
+        
+        <ul id="bag-items" class="bag-items">
+          <!-- Bag items will be dynamically added here -->
+        </ul>
+      </div>
+      
+      <div class="bag-panel-footer">
+        <div class="bag-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="bag-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span>FREE</span>
+          </div>
+          <div class="summary-row">
+            <span>Estimated Tax</span>
+            <span id="bag-tax">$0.00</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="bag-total">$0.00</span>
+          </div>
+        </div>
+        
+        <div class="bag-actions">
+          <button id="checkout-btn" class="checkout-btn">Check Out</button>
+          <div class="payment-options">
+            <p>Pay Monthly</p>
+            <div class="payment-icons">
+              <img src="D:\my programs\apple store\images\apple2-removebg-preview.png" alt="Apple Card" width="30">
+              <span class="payment-divider"></span>
+              <img src="D:\my programs\apple store\images\paypal.svg" alt="PayPal" width="30">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add backdrop for bag panel -->
+  <div id="bag-backdrop" class="bag-backdrop"></div>
+
+  <!-- Enhanced Product View Details Modal -->
+  <div id="product-view-details" class="product-view-details-modal">
+    <div class="product-view-details-backdrop"></div>
+    <div class="product-view-details-container">
+      <button class="close-view-details" aria-label="Close details">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+      
+      <div class="product-view-details-content">
+        <div class="product-details-header">
+          <div class="product-details-breadcrumb">
+            <a href="#" class="breadcrumb-link">Store</a>
+            <span class="breadcrumb-separator">›</span>
+            <a href="#" id="product-category-link" class="breadcrumb-link">Category</a>
+            <span class="breadcrumb-separator">›</span>
+            <span id="product-details-name-breadcrumb">Product</span>
+          </div>
+          
+          <div class="product-details-title-container">
+            <h1 id="product-details-name" class="product-details-title"></h1>
+            <p id="product-details-tagline" class="product-details-tagline"></p>
+          </div>
+
+          <div class="product-details-nav">
+            <button class="product-nav-item active" data-tab="overview">Overview</button>
+            <button class="product-nav-item" data-tab="tech-specs">Tech Specs</button>
+            <button class="product-nav-item" data-tab="compare">Compare</button>
+            <div class="product-nav-active-indicator"></div>
+          </div>
+        </div>
+        
+        <div class="product-details-tabs">
+          <!-- Overview Tab -->
+          <div class="product-details-tab active" id="tab-overview">
+            <div class="product-details-gallery">
+              <div class="product-details-main-img-container">
+                <img id="product-details-main-img" src="" alt="">
+                <div class="product-zoom-overlay">
+                  <div class="zoom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="product-details-gallery-nav">
+                <div class="gallery-nav-item active" data-angle="front">
+                  <img src="" alt="Front">
+                </div>
+                <div class="gallery-nav-item" data-angle="side">
+                  <img src="" alt="Side">
+                </div>
+                <div class="gallery-nav-item" data-angle="back">
+                  <img src="" alt="Back">
+                </div>
+                <div class="gallery-nav-item video-preview" data-type="video">
+                  <img src="" alt="Video">
+                  <div class="video-play-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="product-details-info">
+              <div class="product-info-section">
+                <h2>Product Overview</h2>
+                <div class="product-info-content">
+                  <p id="product-details-description"></p>
+                  <div class="product-key-features">
+                    <div class="key-feature">
+                      <div class="key-feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                          <line x1="8" y1="21" x2="16" y2="21"></line>
+                          <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                      </div>
+                      <div class="key-feature-text">
+                        <h3 id="key-feature-1-title">Feature Title</h3>
+                        <p id="key-feature-1-desc">Feature description</p>
+                      </div>
+                    </div>
+                    <div class="key-feature">
+                      <div class="key-feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+                          <line x1="16" y1="8" x2="2" y2="22"></line>
+                          <line x1="17.5" y1="15" x2="9" y2="15"></line>
+                        </svg>
+                      </div>
+                      <div class="key-feature-text">
+                        <h3 id="key-feature-2-title">Feature Title</h3>
+                        <p id="key-feature-2-desc">Feature description</p>
+                      </div>
+                    </div>
+                    <div class="key-feature">
+                      <div class="key-feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                      </div>
+                      <div class="key-feature-text">
+                        <h3 id="key-feature-3-title">Feature Title</h3>
+                        <p id="key-feature-3-desc">Feature description</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-info-section">
+                <h2>Choose Your Configuration</h2>
+                <div class="product-configuration">
+                  <div class="config-section">
+                    <h3>Color</h3>
+                    <div class="details-color-options">
+                      <!-- Colors will be dynamically added here -->
+                    </div>
+                  </div>
+                  
+                  <div class="config-section storage-config">
+                    <h3>Storage</h3>
+                    <div class="details-storage-options">
+                      <!-- Storage options will be dynamically added here -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-info-section">
+                <h2>Pricing</h2>
+                <div class="product-pricing">
+                  <div class="product-price-container">
+                    <p class="product-price-label">Starting at</p>
+                    <p id="product-details-price" class="product-price"></p>
+                  </div>
+                  <div class="payment-options-label">
+                    <span>Payment options available</span>
+                    <a href="#" class="learn-more">Learn more <span class="chevron">›</span></a>
+                  </div>
+                </div>
+                
+                <div class="product-actions">
+                  <button id="details-add-to-bag" class="btn details-add-to-bag">Add to Bag</button>
+                  <button class="favorite-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tech Specs Tab -->
+          <div class="product-details-tab" id="tab-tech-specs">
+            <div class="tech-specs-container">
+              <h2>Technical Specifications</h2>
+              <div class="specs-grid">
+                <div class="specs-group">
+                  <h3>Display</h3>
+                  <ul class="specs-list">
+                    <li>
+                      <span class="spec-label">Screen size</span>
+                      <span id="spec-screen-size" class="spec-value">6.1 inches</span>
+                    </li>
+                    <li>
+                      <span class="spec-label">Resolution</span>
+                      <span id="spec-resolution" class="spec-value">2532 x 1170 at 460 ppi</span>
+                    </li>
+                    <li>
+                      <span class="spec-label">Display type</span>
+                      <span id="spec-display-type" class="spec-value">Super Retina XDR display</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="specs-group">
+                  <h3>Processor</h3>
+                  <ul class="specs-list">
+                    <li>
+                      <span class="spec-label">Chip</span>
+                      <span id="spec-chip" class="spec-value">A16 Bionic chip</span>
+                    </li>
+                    <li>
+                      <span class="spec-label">CPU</span>
+                      <span id="spec-cpu" class="spec-value">6-core CPU</span>
+                    </li>
+                    <li>
+                      <span class="spec-label">GPU</span>
+                      <span id="spec-gpu" class="spec-value">5-core GPU</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="specs-group">
+                  <h3>Camera</h3>
+                  <ul class="specs-list">
+                    <li>
+                      <span class="spec-label">Rear camera</span>
+                      <span id="spec-rear-camera" class="spec-value">12MP dual-camera system</span>
+                    </li>
+                    <li>
+                      <span class="spec-label">Front camera</span>
+                      <span id="spec-front-camera" class="spec-value">12MP TrueDepth camera</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="specs-group">
+                  <h3>Battery</h3>
+                  <ul class="specs-list">
+                    <li>
+                      <span class="spec-label">Video playback</span>
+                      <span id="spec-video-playback" class="spec-value">Up to 19 hours</span>
+                    </li>
+                    <li>
+                      <span class="spec-label">Audio playback</span>
+                      <span id="spec-audio-playback" class="spec-value">Up to 75 hours</span>
+                    </li>
+                    <li>
+                      <span class="spec-label">Fast-charge capable</span>
+                      <span id="spec-fast-charge" class="spec-value">Up to 50% charge in 30 minutes</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="specs-group">
+                  <h3>Dimensions and Weight</h3>
+                  <ul class="specs-list">
+                    <li>
+                      <span class="spec-label">Height</span>
+                      <span id="spec-height" class="spec-value">146.7 mm</span>
+                    </li>
+                    <li>
+                      <span class="spec-label">Width</span>
+                      <span id="spec-width" class="spec-value">71.5 mm</span>
+                    </li>
+                    <li>
+                      <span class="spec-label">Depth</span>
+                      <span id="spec-depth" class="spec-value">7.65 mm</span>
+                    </li>
+                    <li>
+                      <span class="spec-label">Weight</span>
+                      <span id="spec-weight" class="spec-value">172 grams</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Compare Tab -->
+          <div class="product-details-tab" id="tab-compare">
+            <div class="compare-container">
+              <h2>Compare with other models</h2>
+              <div class="compare-grid">
+                <div class="compare-column current-product">
+                  <div class="compare-product-image">
+                    <img id="compare-current-img" src="" alt="">
+                  </div>
+                  <h3 id="compare-current-name">Current Product</h3>
+                  <p id="compare-current-price">$999</p>
+                  <ul class="compare-features">
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span id="compare-current-feature1">Feature 1</span>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span id="compare-current-feature2">Feature 2</span>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span id="compare-current-feature3">Feature 3</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="compare-column">
+                  <div class="compare-product-image">
+                    <img id="compare-alt1-img" src="" alt="">
+                  </div>
+                  <h3 id="compare-alt1-name">Alternative 1</h3>
+                  <p id="compare-alt1-price">$799</p>
+                  <ul class="compare-features">
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span id="compare-alt1-feature1">Feature 1</span>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span id="compare-alt1-feature2">Feature 2</span>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span id="compare-alt1-feature3">Feature 3</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="compare-column">
+                  <div class="compare-product-image">
+                    <img id="compare-alt2-img" src="" alt="">
+                  </div>
+                  <h3 id="compare-alt2-name">Alternative 2</h3>
+                  <p id="compare-alt2-price">$1,199</p>
+                  <ul class="compare-features">
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span id="compare-alt2-feature1">Feature 1</span>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span id="compare-alt2-feature2">Feature 2</span>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span id="compare-alt2-feature3">Feature 3</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Zoom Modal -->
+  <div id="image-zoom-modal" class="image-zoom-modal">
+    <div class="image-zoom-backdrop"></div>
+    <div class="image-zoom-container">
+      <button class="close-zoom" aria-label="Close zoom">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+      <div class="image-zoom-content">
+        <img id="zoomed-image" src="" alt="Zoomed product image">
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div id="video-modal" class="video-modal">
+    <div class="video-modal-backdrop"></div>
+    <div class="video-modal-container">
+      <button class="close-video" aria-label="Close video">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+      <div class="video-modal-content">
+        <div class="video-container">
+          <video id="product-video" controls>
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="bag.js"></script>
+  <script src="js2.js"></script>
+  <script src="difference.js"></script>
+  <script src="hero-info.js"></script>
+  <script src="apple_view_details.js"></script>
+</body>
+</html>
+
