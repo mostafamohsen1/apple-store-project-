@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Left AirPod -->
+  <path d="M80,150 C80,120 90,100 120,90 C140,85 150,100 150,120 L150,160 C150,180 140,190 120,185 C90,175 80,180 80,150 Z" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <path d="M80,140 C80,125 90,105 106,100" fill="none" stroke="#eee" stroke-width="1"/>
+  <rect x="110" y="130" width="20" height="40" rx="10" ry="10" fill="#eee" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Right AirPod -->
+  <path d="M220,150 C220,120 210,100 180,90 C160,85 150,100 150,120 L150,160 C150,180 160,190 180,185 C210,175 220,180 220,150 Z" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <path d="M220,140 C220,125 210,105 194,100" fill="none" stroke="#eee" stroke-width="1"/>
+  <rect x="170" y="130" width="20" height="40" rx="10" ry="10" fill="#eee" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Charging Case -->
+  <rect x="100" y="200" width="100" height="60" rx="30" ry="30" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <line x1="100" y1="230" x2="200" y2="230" stroke="#eee" stroke-width="1"/>
+  <circle cx="150" cy="230" r="3" fill="#eee"/>
+  
+  <!-- Text Label -->
+  <text x="150" y="280" font-family="Arial, sans-serif" font-size="16" fill="#555" text-anchor="middle">AirPods (3rd generation)</text>
+</svg> 

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Battery Pack Body -->
+  <rect x="75" y="50" width="150" height="200" rx="20" ry="20" fill="#f5f5f7" stroke="#ddd" stroke-width="2"/>
+  
+  <!-- MagSafe Ring -->
+  <circle cx="150" cy="100" r="40" fill="none" stroke="#ddd" stroke-width="3" stroke-dasharray="3,3"/>
+  <circle cx="150" cy="100" r="30" fill="none" stroke="#ddd" stroke-width="2"/>
+  
+  <!-- Apple Logo -->
+  <circle cx="150" cy="100" r="12" fill="#f5f5f7"/>
+  <path d="M150,92 C155,88 162,91 162,98 C162,113 150,113 150,113 L150,103" fill="#ddd"/>
+  <path d="M149,92 C144,88 137,91 137,98 C137,113 149,113 149,113 L149,103" fill="#ddd"/>
+  
+  <!-- LED Indicator -->
+  <circle cx="150" cy="170" r="5" fill="#eee" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Lightning Port -->
+  <rect x="140" y="250" width="20" height="5" rx="2" ry="2" fill="#eee" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Text Label -->
+  <text x="150" y="280" font-family="Arial, sans-serif" font-size="16" fill="#555" text-anchor="middle">MagSafe Battery Pack</text>
+</svg> 

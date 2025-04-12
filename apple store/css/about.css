@@ -1,0 +1,432 @@
+body {
+    font-family: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #1d1d1f;
+}
+
+header {
+    background: #f5f5f7;
+    color: #1d1d1f;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #d2d2d7;
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #1d1d1f;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0071e3;
+}
+
+header button {
+    background-color: #0071e3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: #005bb5;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 0;
+    padding: 10px 0;
+    color: #1d1d1f;
+}
+
+p {
+    margin: 10px 0;
+    color: #6e6e73;
+}
+
+.dynamic-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#login-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 5px;
+}
+
+#login-form button {
+    background-color: #0071e3;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#login-form button:hover {
+    background-color: #005bb5;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#toggle-password {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0071e3;
+}
+
+#login-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.product {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+.product h3 {
+    margin: 10px 0;
+    color: #1d1d1f;
+}
+
+.product-button {
+    background-color: #0071e3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.product-button:hover {
+    background-color: #005bb5;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #0071e3(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #005bb5;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel button {
+    background: none;
+    border: none;
+    color: #0071e3;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.carousel button:hover {
+    color: #005bb5;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* About Page Specific Styles */
+.about-section {
+    background-color: #f5f5f7;
+    padding: 120px 20px 60px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section .content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 21px;
+    line-height: 1.5;
+    color: #86868b;
+    margin-bottom: 30px;
+}
+
+.hero-cta {
+    margin-top: 30px;
+}
+
+/* History, Mission, Values sections */
+.history-section, .mission-section, .values-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    border-bottom: 1px solid #d2d2d7;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.history-section.appear, .mission-section.appear, .values-section.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.history-section .content, .mission-section .content, .values-section .content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.history-section h2, .mission-section h2, .values-section h2 {
+    color: #1d1d1f;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.history-section p, .mission-section p, .values-section p {
+    color: #86868b;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Values list styling */
+.values-list {
+    list-style-type: none;
+    margin: 30px 0;
+    padding: 0;
+}
+
+.values-list li {
+    margin-bottom: 18px;
+    padding-left: 30px;
+    position: relative;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #86868b;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.values-section.appear .values-list li {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: calc(0.1s * var(--index, 0));
+}
+
+.values-list li:nth-child(1) { --index: 1; }
+.values-list li:nth-child(2) { --index: 2; }
+.values-list li:nth-child(3) { --index: 3; }
+.values-list li:nth-child(4) { --index: 4; }
+.values-list li:nth-child(5) { --index: 5; }
+
+.values-list li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #2997ff;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.values-list strong {
+    color: #1d1d1f;
+    font-weight: 600;
+}
+
+/* CTA Wrapper */
+.cta-wrapper {
+    margin-top: 40px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition-delay: 0.3s;
+}
+
+.mission-section.appear .cta-wrapper {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mission section special styling */
+.mission-section {
+    background-color: #f5f5f7;
+}
+
+/* Animation for the about section */
+.about-section .content {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-section h1 {
+        font-size: 36px;
+    }
+    
+    .about-section p {
+        font-size: 18px;
+    }
+    
+    .history-section h2, .mission-section h2, .values-section h2 {
+        font-size: 28px;
+    }
+    
+    .history-section p, .mission-section p, .values-section p,
+    .values-list li {
+        font-size: 15px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .about-section h1 {
+        font-size: 32px;
+    }
+}

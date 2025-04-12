@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <rect x="8" y="14" width="44" height="32" rx="2" fill="#000000"/>
+  <rect x="12" y="18" width="36" height="24" fill="#2CB8FF"/>
+  <path d="M30,50 L38,50 L38,54 L22,54 L22,50 L30,50 Z" fill="#000000"/>
+  <path d="M28,42 L32,42 L32,50 L28,50 L28,42 Z" fill="#000000"/>
+  <text x="30" y="34" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">TV+</text>
+</svg> 
